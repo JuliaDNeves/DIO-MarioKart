@@ -1,20 +1,4 @@
-const player1 = {
-    NOME: "Mario",
-    VELOCIDADE: 4,
-    MANOBRABILIDADE: 3,
-    PODER: 3,
-    PONTOS: 0,
-};
-
-
-const player2 = {
-    NOME: "Luigi",
-    VELOCIDADE: 3,
-    MANOBRABILIDADE: 4,
-    PODER: 4,
-    PONTOS: 0,
-};
-
+const { player1, player2, player3, player4, player5, player6 } = require('./utils/players');
 
 async function rollDice(){
     return Math.floor(Math.random() * 6) + 1;
@@ -247,8 +231,8 @@ async function declareWinner(character1, character2) {
 
 
 (async function main() {
-    console.log(` 🚦🏁 Corrida entre ${player1.NOME} e ${player2.NOME} começando... \n`)
+    console.log(` 🚦🏁 Corrida entre ${player4.NOME} e ${player1.NOME} começando... \n`)
 
-    await playRaceEngine(player1, player2);
-    await declareWinner(player1, player2);
+    await playRaceEngine(player4, player1);
+    await declareWinner(player4, player1);
 })();
